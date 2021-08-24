@@ -7,7 +7,8 @@ def sodaslurper(lines):
     found = nums[1]
     cost = nums[2]
 
-    # 
+    # Det har ingenting å si om man starter med bottles eller om man finner de i
+    # løpet av dagen, summen er totalen flasker du har ved start uansett
     current = start + found
 
     bought = 0

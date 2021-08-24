@@ -36,9 +36,14 @@ før, finner `f` tomflasker i løpet av dagen og en brus koster `c` tomflasker i
 
 Prøv å løs denne oppgaven selv, du kan se formatet og noen eksempler på riktig output for
 en gitt input på Kattis-linken. Hvis du sitter helt fast eller sliter med input/output, se
-løsningen her: [Java](kattis/SodaSlurper.java), [Python](kattis/SodaSlurper.py)
+løsningen her: [Java](kattis/oppgaver/SodaSlurper.java), [Python](kattis/oppgaver/SodaSlurper.py)
 
-Når du har løst oppgaven og testet med 
+Når du har løst oppgaven og testet at du får riktig svar for "test-casene" under
+beskrivelsen, kan du prøve å sende inn programmet ditt ved å trykke på submit og da vil
+Kattis serveren kjøre programmet ditt med mange tester, som tester både at programmet ditt
+gir riktig output, men også at programmet ditt er raskt nok. Noen løsninger kan være
+korrekte, men ikke raske nok til å løse problemet effektivt, og dette skal du lære om i
+IN2010!
 
 Her er en liste med Kattis oppgaver som kan løses ved hjelp av pensumet i IN2010. Husk at
 kategorien oppgaven er plassert i ikke nødvendigvis er den raskeste løsningen og det er
