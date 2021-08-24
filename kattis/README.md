@@ -6,7 +6,7 @@ god i IN2010 er du nødt til å kunne anvende pensumet slik at du kan avgjøre h
 algoritmer og/eller datastrukturer du trenger for å løse et problem, og det er akkurat
 dette som Kattis utfordrer deg på.
 
-#### Løse din første oppgave
+### Løse din første oppgave
 
 Oppgavene fungerer slik at du får en oppgavebeskrivelse om et eller annet problem som skal
 løses.  Oppgaven skal da løses slik at programmet ditt leser inn noen linjer fra standard
@@ -17,6 +17,8 @@ er det som oppgaven beskriver, og du skal ut ifra denne inputten løse problemet
 i oppgaven og skrive ut svaret ditt til standard output (`System.out.println()` i Java
 eller `print()` i Python).
 
+##### Soda Slurper
+
 La oss prøve å løse oppgaven [Soda Slurper](https://open.kattis.com/problems/sodaslurper).
 Oppgaven går ut på at en person har lyst til å drikke så mye brus som mulig på en dag ved
 å pante tomflasker, kjøpe brus og drikke de, og så bruke panten igjen. Du skal regne ut
@@ -25,8 +27,28 @@ før, finner `f` tomflasker i løpet av dagen og en brus koster `c` tomflasker i
 `e,f,c` er tall som du leser inn fra terminalen.
 
 Prøv å løs denne oppgaven selv, du kan se formatet og noen eksempler på riktig output for
-en gitt input på Kattis-linken. Hvis du sitter helt fast eller sliter med input/output, se
-løsningen her: [Java](kattis/oppgaver/SodaSlurper.java), [Python](kattis/oppgaver/SodaSlurper.py)
+en gitt input på Kattis-linken. [Her](kodeskall/) finner du et kodeskall for Python og
+Java som du kan bruke som et utgangspunkt. Alt som skjer i denne koden er at alle linjer
+blir lest inn fra standard input inn i et array som du så kan bruke til å løse oppgaven i
+`solution` metoden. Du kan for eksempel hente første linje ved å gjøre `lines[0]`
+
+Hvis du sitter helt fast eller sliter med input/output, se løsningen her:
+[Java](kattis/oppgaver/SodaSlurper.java), [Python](kattis/oppgaver/SodaSlurper.py)
+
+##### Teste koden din
+
+For å teste koden din er du nødt til å sende inn en fil som input til kommandolinjen.
+Dette kan gjøres i terminal slik `java Program < inputfil.txt` der `inputfil.txt` inneholder
+for eksempel `9 0 3` som i "Soda Slurper" oppgaven. (Du kan også laste ned alle
+eksempelfilene fra Kattis under submit knappen!)
+
+En annen måte å gjøre det på er å rett og slett skrive inn det som skal være input til
+programmet etter at du har gjort `java Program`, problemet da er at programmet ikke
+slutter å lese inn linjer før den får en "slutt på fil" (EOF) symbol. Da kan du på Linux
+og Mac hvertfall trykke på `Ctrl + D` for å sende EOF, men dette er vanskeligere å få til
+på Windows.
+
+##### Sende inn koden
 
 Når du har løst oppgaven og testet at du får riktig svar for "test-casene" under
 beskrivelsen, kan du prøve å sende inn programmet ditt ved å trykke på submit og da vil
@@ -34,6 +56,8 @@ Kattis serveren kjøre programmet ditt med mange tester, som tester både at pro
 gir riktig output, men også at programmet ditt er raskt nok. Noen løsninger kan være
 korrekte, men ikke raske nok til å løse problemet effektivt, og dette skal du lære om i
 IN2010!
+
+### Oppgaver
 
 Her er en liste med Kattis oppgaver som kan løses ved hjelp av pensumet i IN2010. Husk at
 kategorien oppgaven er plassert i ikke nødvendigvis er den raskeste løsningen og det er
@@ -51,7 +75,7 @@ løst noen oppgaver.
 
 ##### Binærsøk
 
-* [guess](https://open.kattis.com/problems/guess) (Litt spesiell)
+* [guess](https://open.kattis.com/problems/guess) - Litt spesiell
 
 ##### Trær, binære søketrær, balanserte søketrær
 
@@ -59,7 +83,13 @@ løst noen oppgaver.
 
 ##### Kø, stack, prioritetskø, heap
 
-##### Graftraversering, DFS/BFS
+##### Grafer, Graftraversering, DFS/BFS
+* [weak vertices](https://open.kattis.com/problems/weakvertices)
+* [horror](https://open.kattis.com/problems/horror)
+
+##### Topologisk sortering
+* [pick up sticks](https://open.kattis.com/problems/pickupsticks)
+* [build dependencies](https://open.kattis.com/problems/builddeps) - Ganske krevende
 
 ##### Shortest path, Dijkstra's algoritme med mer
 
@@ -68,3 +98,5 @@ løst noen oppgaver.
 ##### Sterkt sammenhengende komponenter
 
 ##### Sortering
+
+* [DA-sort](https://open.kattis.com/problems/dasort)
