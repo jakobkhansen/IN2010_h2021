@@ -27,7 +27,16 @@ er det som oppgaven beskriver, og du skal ut ifra denne inputten løse problemet
 i oppgaven og skrive ut svaret ditt til standard output (`System.out.println()` i Java
 eller `print()` i Python).
 
-\<Insert bottles oppgave her\>
+La oss prøve å løse oppgaven [Soda Slurper](https://open.kattis.com/problems/sodaslurper).
+Oppgaven går ut på at en person har lyst til å drikke så mye brus som mulig på en dag ved
+å pante tomflasker, kjøpe brus og drikke de, og så bruke panten igjen. Du skal regne ut
+hvor mange flasker denne personen klarer å drikke, gitt at personen har `e` tomflasker fra
+før, finner `f` tomflasker i løpet av dagen og en brus koster `c` tomflasker i pant.
+`e,f,c` er tall som du leser inn fra terminalen.
+
+Prøv å løs denne oppgaven selv, du kan se formatet og noen eksempler på riktig output for
+en gitt input på Kattis-linken. Hvis du sitter helt fast eller sliter med input/output, se
+løsningen her: [Java](kattis/SodaSlurper.java), [Python](kattis/SodaSlurper.py)
 
 Når du har løst oppgaven og testet med 
 

@@ -1,1 +1,1 @@
-# Uke 1 - Big O notasjon og binærsøk
+# Uke 1 - Big O notasjon, binærsøk, trær
