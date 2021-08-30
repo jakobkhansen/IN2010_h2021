@@ -7,5 +7,5 @@
 **/*.snm
 **/*.toc
 **/*.vrb
-**/*.synctex.gz
+**/*.gz
 **/*.log
