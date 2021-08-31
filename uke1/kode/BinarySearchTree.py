@@ -40,12 +40,29 @@ class BinarySearchTree:
             else:
                 self.insert_recursive(value, current.right)
 
+    def search(self, value : int) -> Optional[Node]:
+        if self.root == None:
+            return None
+
+        return self.search_recursive(value, self.root)
+
+    def search_recursive(self, value : int, current : Optional[Node]) -> Optional[Node]:
+        if current == None:
+            return None
+
+        if current.value == value:
+            return current
+
+        elif current.value > value:
+            return self.search_recursive(value, current.left)
+
+        elif current.value < value:
+            return self.search_recursive(value, current.right)
+
+
 
 
 bst = BinarySearchTree()
 bst.insert(10)
 bst.insert(15)
 bst.insert(12)
-
-
-

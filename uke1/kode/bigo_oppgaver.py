@@ -21,12 +21,21 @@ def print_number_many_times(n : int) -> None:
 # 3. n er len(array)
 def contains_duplicate(array : list[int]) -> bool:
     for i in range(len(array)):
+        for j in range(len(array)):
+            if i != j and array[i] == array[j]:
+                return True
+    return False
+
+
+# 4. n er len(array)
+def contains_duplicate_smarter(array : list[int]) -> bool:
+    for i in range(len(array)):
         for j in range(i+1, len(array)):
             if array[i] == array[j]:
                 return True
     return False
 
-# 4. n er n :)
+# 5. n er n :)
 def multiply_by_two(n : int) -> None:
     current = 1
     while current <= n:
@@ -35,7 +44,7 @@ def multiply_by_two(n : int) -> None:
 
 
 
-# 5. n er len(array1), m = len(array2)
+# 6. n er len(array1), m = len(array2)
 def sums_multiplied(array1 : list[int], array2 : list[int]) -> int:
     sum1 = 0
     sum2 = 0
@@ -49,13 +58,13 @@ def sums_multiplied(array1 : list[int], array2 : list[int]) -> int:
     return sum1*sum2
 
 
-# 6. n er len(array1), m er len(array2), k er k :)
+# 7. n er len(array1), m er len(array2), k er k :)
 def sums_multiplied_k_times(array1 : list[int], array2 : list[int], k : int):
     sum = 0
     for _ in range(k):
         sum += sums_multiplied(array1, array2)
 
-# n er len(array)
+# Ekstra: n er len(array)
 # Se her: https://wiki.python.org/moin/TimeComplexity
 def get_array_sorted(array : list[int]) -> list[int]:
     return sorted(array)

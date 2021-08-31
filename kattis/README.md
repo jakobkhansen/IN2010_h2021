@@ -70,8 +70,13 @@ Her er først en liste med litt enklere problemer som ikke krever noe særlig av
 IN2010, men er ment for å introdusere deg til hvordan oppgavene på Kattis ser ut og få
 løst noen oppgaver.
 
+* [add two numbers](https://open.kattis.com/problems/addtwonumbers) - Viser hvordan man leser inn fra input
 * [trik](https://open.kattis.com/problems/trik)
 * [fizzbuzz](https://open.kattis.com/problems/fizzbuzz) - Veldig vanlig intervjuspørsmål
+* [exam](https://open.kattis.com/problems/exam)
+* [toilet](https://open.kattis.com/problems/toilet)
+* [shopaholic](https://open.kattis.com/problems/shopaholic)
+* [bit by bit](https://open.kattis.com/problems/bitbybit)
 
 ##### Binærsøk
 

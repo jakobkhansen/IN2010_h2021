@@ -2,9 +2,9 @@ import bisect
 
 def binary_search(array : list[int], elem : int):
     low = 0
-    high = len(array)
+    high = len(array)-1
 
-    while low < high:
+    while low <= high:
         middle = (low + high) // 2
 
         if array[middle] == elem:
@@ -15,6 +15,3 @@ def binary_search(array : list[int], elem : int):
             low = middle + 1
 
     return -1
-
-a = [1,2,3,5,7,8,10,20,40]
-print(binary_search(a, 7))

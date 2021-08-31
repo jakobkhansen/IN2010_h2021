@@ -39,19 +39,16 @@
         \item Analysere kjøretid! Hvilken algoritme er raskest? (Grovt)
         \pause
         \item Abstrahere bort de små forskjellene
-        \pause
         \begin{lstlisting}[basicstyle=\scriptsize]
-def numExists(array : list[int], numToFind : int) -> bool:
+def add(array : list[int], num_to_add : int) -> None:
+    num_to_add = num_to_add + 1
 
-    # Itererer over array, hvis vi finner tallet, true
+    # Itererer over array, legger til num_to_add på hver indeks
     for i in range(len(array)):
-        if array[i] == numToFind:
-            return true
-
-    # Ingen elementer er lik tallet, false
-    return false
+        array[i] = array[i] + num_to_add
 		\end{lstlisting}
         \end{itemize}
+
 
     \end{frame}
 
