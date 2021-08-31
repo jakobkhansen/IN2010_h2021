@@ -5,6 +5,6 @@ gruppetimene.
 
 ### Ukeplan
 
-* [Uke 1](uke1) - Big O notasjon og binærsøk
+* [Uke 1](uke1) - Big O notasjon, binærsøk, trær, binære søketrær
 
 
