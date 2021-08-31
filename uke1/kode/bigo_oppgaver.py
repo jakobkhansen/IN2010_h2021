@@ -1,6 +1,3 @@
-import random
-import time
-
 # Avgjør hvilken O-notasjon hver funksjon er i
 
 # 1. n er len(array)
