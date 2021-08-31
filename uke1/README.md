@@ -1,5 +1,13 @@
 # Uke 1 - Big O notasjon, binærsøk, trær
 
+### Plan
+
+* Snakke om gruppetimene, bli litt kjent (ikke noe kleint!)
+* Diskutere litt om emnet
+* Big O notasjon
+* Binærsøk
+* Trær
+* Binære søketrær
 
 ### Oppgaver
 
