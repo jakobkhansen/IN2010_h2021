@@ -84,9 +84,12 @@ løst noen oppgaver.
 
 ##### Trær, binære søketrær, balanserte søketrær
 
+* [number tree](https://open.kattis.com/problems/numbertree) - Her kan man bruke kombinasjoner av trær, køer og binærsøk!
 * [boxes](https://open.kattis.com/problems/boxes) - Veldig bra!
 
 ##### Kø, stack, prioritetskø, heap
+* [teque](https://open.kattis.com/problems/teque)
+* [knigs of the forest](https://open.kattis.com/problems/knigsoftheforest)
 
 ##### Grafer, Graftraversering, DFS/BFS
 * [weak vertices](https://open.kattis.com/problems/weakvertices)
@@ -97,11 +100,15 @@ løst noen oppgaver.
 * [build dependencies](https://open.kattis.com/problems/builddeps) - Ganske krevende
 
 ##### Shortest path, Dijkstra's algoritme med mer
+* [lost in translation](https://open.kattis.com/problems/lost)
 
 ##### Spenntrær
+* [min span tree](https://open.kattis.com/problems/minspantree)
 
 ##### Sterkt sammenhengende komponenter
+* [Equivalences](https://open.kattis.com/problems/equivalences)
 
 ##### Sortering
-
+* [DVDs](https://open.kattis.com/problems/dvds)
 * [DA-sort](https://open.kattis.com/problems/dasort)
+* [Ultra-Quicksort](https://open.kattis.com/problems/ultraquicksort) - Vanskelig!
