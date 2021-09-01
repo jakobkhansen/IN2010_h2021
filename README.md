@@ -6,6 +6,7 @@ gruppetimene.
 ##### Kontakt
 
 Mail: jakobkha@uio.no
+
 Mattermost: jakobkha
 
 Raskere svar og lettere å ha lenger samtaler på Mattermost!
