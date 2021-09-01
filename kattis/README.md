@@ -85,6 +85,7 @@ løst noen oppgaver.
 ##### Trær, binære søketrær, balanserte søketrær
 
 * [number tree](https://open.kattis.com/problems/numbertree) - Her kan man bruke kombinasjoner av trær, køer og binærsøk!
+* [kitten](https://open.kattis.com/problems/kitten)
 * [boxes](https://open.kattis.com/problems/boxes) - Veldig bra!
 
 ##### Kø, stack, prioritetskø, heap
