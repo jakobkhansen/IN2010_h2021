@@ -121,6 +121,13 @@ def _display_aux(node):
     return lines, n + m + u, max(p, q) + 2, n + u // 2
 
 
+def find_min(node : Node):
+    current = node
+    while current.left != None:
+        current = current.left
+    return current
+
+
 bst = BinarySearchTree()
 bst.insert(10)
 bst.insert(15)
