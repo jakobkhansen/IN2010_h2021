@@ -14,3 +14,4 @@ Raskere svar og lettere å ha lenger samtaler på Mattermost!
 ### Ukeplan
 
 * [Uke 1](uke1) - Big O notasjon, binærsøk, trær, binære søketrær
+* [Uke 2](uke2) - Balanserte BST og sletting i BST (Rakk ikke forrige uke)
