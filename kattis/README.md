@@ -100,10 +100,12 @@ løst noen oppgaver.
 * [pick up sticks](https://open.kattis.com/problems/pickupsticks)
 * [build dependencies](https://open.kattis.com/problems/builddeps) - Ganske krevende
 
-##### Shortest path, Dijkstra's algoritme med mer
+##### Shortest path, Dijkstra's algoritme og liknende
 * [lost in translation](https://open.kattis.com/problems/lost)
 
 ##### Spenntrær
+* [island hopping](https://open.kattis.com/problems/islandhopping)
+* [cats](https://open.kattis.com/problems/cats)
 * [min span tree](https://open.kattis.com/problems/minspantree)
 
 ##### Sterkt sammenhengende komponenter
