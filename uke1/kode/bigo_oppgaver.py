@@ -11,11 +11,12 @@ def string_contains_space(input_string : str) -> bool:
             return True
     return False
 
+# 3. n er n :)
 def print_number_many_times(n : int) -> None:
     for _ in range(20):
         print(n)
 
-# 3. n er len(array)
+# 4. n er len(array)
 def contains_duplicate(array : list[int]) -> bool:
     for i in range(len(array)):
         for j in range(len(array)):
@@ -24,7 +25,7 @@ def contains_duplicate(array : list[int]) -> bool:
     return False
 
 
-# 4. n er len(array)
+# 5. n er len(array)
 def contains_duplicate_smarter(array : list[int]) -> bool:
     for i in range(len(array)):
         for j in range(i+1, len(array)):
@@ -32,7 +33,7 @@ def contains_duplicate_smarter(array : list[int]) -> bool:
                 return True
     return False
 
-# 5. n er n :)
+# 6. n er n :)
 def multiply_by_two(n : int) -> None:
     current = 1
     while current <= n:
@@ -41,7 +42,7 @@ def multiply_by_two(n : int) -> None:
 
 
 
-# 6. n er len(array1), m = len(array2)
+# 7. n er len(array1), m = len(array2)
 def sums_multiplied(array1 : list[int], array2 : list[int]) -> int:
     sum1 = 0
     sum2 = 0
@@ -55,7 +56,7 @@ def sums_multiplied(array1 : list[int], array2 : list[int]) -> int:
     return sum1*sum2
 
 
-# 7. n er len(array1), m er len(array2), k er k :)
+# 8. n er len(array1), m er len(array2), k er k :)
 def sums_multiplied_k_times(array1 : list[int], array2 : list[int], k : int):
     sum = 0
     for _ in range(k):
