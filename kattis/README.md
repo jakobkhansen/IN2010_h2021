@@ -33,7 +33,7 @@ blir lest inn fra standard input inn i et array som du så kan bruke til å løs
 `solution` metoden. Du kan for eksempel hente første linje ved å gjøre `lines[0]`
 
 Hvis du sitter helt fast eller sliter med input/output, se løsningen her:
-[Java](kattis/oppgaver/SodaSlurper.java), [Python](kattis/oppgaver/SodaSlurper.py)
+[Java](oppgaver/SodaSlurper.java), [Python](oppgaver/SodaSlurper.py)
 
 ##### Teste koden din
 
