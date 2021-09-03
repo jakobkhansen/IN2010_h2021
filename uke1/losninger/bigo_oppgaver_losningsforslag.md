@@ -1,5 +1,7 @@
 # Big O oppgaver
 
+Dette er et løsningsforslag til [disse](../kode/bigo_oppgaver.py) oppgavene.
+
 ### 1
 
 ```python
