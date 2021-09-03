@@ -68,6 +68,16 @@ lista i den innerste løkka, men sammenlikner heller med alle tall til høyre fo
 ser på. Her unngår vi altså å se på duplikate par. Antall par i en liste kan man regne ut
 via formelen `(n*(n-1))/2` og dette kan visualiseres slik:
 
+![Bilde](https://i.imgur.com/iMHvCLq.png)
+
+Her skal alle 1'ere symbolere 1 iterasjon av den innerste løkka når input er en liste med
+5 elementer. For oppgave 4 er dette ganske greit, vi går gjennom alle elementer for hvert
+annet element i lista, som gir oss 25 iterasjoner (5²). I oppgave 6 ser vi at vi går
+gjennom færre og færre elementer jo lenger vi kommer, men vi har bare (omtrent) halvert
+antall iterasjoner. Siden å halvere antall iterasjoner er en konstant, faller det bort i O
+notasjonen, og vi får fortsatt `O(n²)` på oppgave 5, selvom den er litt smartere.
+
+
 ### 6
 
 ```python
@@ -87,8 +97,8 @@ Noen lurer ofte på hvorfor vi kan skrive `O(log n)` uten å skrive en base. For
 dette kan være at man egentlig har en implisitt base av `e`, den naturlige logaritmen, som
 skrives `ln(n)`. Hvis man for eksempel skal ha base 2 fra denne, så er det `ln(n)/ln(2)`,
 men dette er jo fortsatt `O(ln(n))`, siden `ln(2)` er en konstant! Dermed kan vi trekke
-konklusjonen at hvilken base man velger er en konstant som ikke har mye å si på veksten av
-kjøretiden, altså er det en konstant vi abstraherer bort.
+konklusjonen at hvilken base man konverterer til er en konstant som ikke har mye å si på
+veksten av kjøretiden, altså er det en konstant vi abstraherer bort.
 
 
 ### 7
