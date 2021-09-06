@@ -69,6 +69,47 @@ class BinarySearchTree:
         elif current.value < value:
             return self.search_recursive(value, current.right)
 
+    def find_parent(self, value : int) -> Optional[Node]:
+        if self.root == None:
+            return None
+        return self.find_parent_recursive(value, self.root)
+
+    def find_parent_recursive(self, value : int, node : Optional[Node]) -> Optional[Node]:
+        if node is None:
+            return None
+
+        if node.left != None and node.left.value == value:
+            return node
+
+        if node.right != None and node.right.value == value:
+            return node
+
+        if node.value > value:
+            return self.find_parent_recursive(value, node.left)
+
+        if node.value < value:
+            return self.find_parent_recursive(value, node.right)
+
+
+    def delete(self, value : int) -> None:
+        if self.root == None:
+            return
+        self.root = self.delete_node(self.root)
+
+    def delete_node(self, node : Node) -> None:
+        if node.left != None and node.right != None:
+            self.delete_node_two_children(node)
+        elif node.left != None:
+            pass
+
+    
+    def delete_node_two_children(self, node : Node) -> None:
+        pass
+
+    def replace_node_with_one_child(self, node : Node) -> Optional[Node]:
+        return node.left if node.left != None else node.right
+
+
 
 def display(node):
     lines, *_ = _display_aux(node)
