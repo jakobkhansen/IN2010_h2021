@@ -2,13 +2,14 @@ import sys
 
 def sodaslurper(lines):
     # Deler tall inn i variabler ved å splitte på space og hente hvert tall som en int
+
     nums = [int(x) for x in lines[0].split(" ")]
     start = nums[0]
     found = nums[1]
     cost = nums[2]
 
-    # Det har ingenting å si om man starter med bottles eller om man finner de i
-    # løpet av dagen, summen er totalen flasker du har ved start uansett
+    # Det har ingenting å si om man starter med bottles eller om man finner de i løpet av
+    # dagen, summen er totalen flasker du har ved start uansett
     current = start + found
 
     bought = 0
