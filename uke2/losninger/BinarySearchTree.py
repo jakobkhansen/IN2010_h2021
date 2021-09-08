@@ -1,6 +1,7 @@
 from typing import Optional
 
 
+# Node class, represents a node in a BST
 class Node:
     def __init__(self, value : int) -> None:
         self.value : int = value
@@ -8,24 +9,30 @@ class Node:
         self.right : Optional[Node] = None
         self.height : int = 0
 
+    # Prints a node in a more clean fashion when doing print(node)
     def __repr__(self) -> str:
         left_val = str(self.left.value) if self.left != None else "None"
         right_val = str(self.right.value) if self.right != None else "None"
 
         return f"Node({self.value}, {left_val}, {right_val})"
 
+    # Updates the height of a given node
+    # Assumes that self.left and self.right have updated heights
     def update_height(self) -> None:
         self.height = max(height(self.left), height(self.right)) + 1
 
     
+    # Visualizes a subtree with root in this node
     def visualize(self):
         display(self)
 
+# Returns the height of a node or null-pointer
 def height(node : Optional[Node]) -> int:
     if node == None:
         return -1
     return node.height
 
+# Returns the balance of a node or null-pointer
 def balanceFactor(node : Optional[Node]) -> int:
     if node == None:
         return -1;
@@ -46,6 +53,7 @@ def leftRotate(top) -> Node:
 
     return middle
 
+# Rotates right with top as the top node, middle as the left child of top
 def rightRotate(top) -> Node:
     middle = top.left;
 
@@ -59,6 +67,7 @@ def rightRotate(top) -> Node:
 
     return middle
 
+# Performs balancing if node is unbalanced
 def balance(node : Node) -> Node:
 
     if balanceFactor(node) < -1:
@@ -73,17 +82,21 @@ def balance(node : Node) -> Node:
 
     return node
 
+# BST implementation with AVL tree rotations
+# Supports search and insertion
 class BinarySearchTree:
 
     def __init__(self):
         self.root = None
 
+    # Visualizes the tree
     def visualize(self):
         if self.root != None:
             self.root.visualize()
         else:
             print("Empty tree")
 
+    # Insert value in tree, balance if necessary
     def insert(self, value : int) -> None:
         if self.root == None:
             self.root = Node(value)
@@ -91,13 +104,12 @@ class BinarySearchTree:
 
         self.root = self.insert_recursive(value, self.root)
 
-
     def insert_recursive(self, value : int, current : Optional[Node]) -> Node:
-        # Left
 
         if current == None:
             current = Node(value)
 
+        # Left
         elif value < current.value:
             current.left = self.insert_recursive(value, current.left)
 
@@ -105,10 +117,14 @@ class BinarySearchTree:
         elif value >= current.value:
             current.right = self.insert_recursive(value, current.right)
 
+        # Oppdater høyde på vei opp i rekursjonen
         current.update_height()
 
+        # Balanser treet og returner eventuelt ny node
         return balance(current)
 
+
+    # Search for a node in the tree
     def search(self, value : int) -> Optional[Node]:
         if self.root == None:
             return None
@@ -182,11 +198,6 @@ def _display_aux(node):
     return lines, n + m + u, max(p, q) + 2, n + u // 2
 
 bst = BinarySearchTree()
-# bst.insert(10)
-# bst.insert(15)
-# bst.insert(12)
-# bst.insert(7)
-# bst.insert(8)
 
 for i in range(100):
     bst.insert(i)
