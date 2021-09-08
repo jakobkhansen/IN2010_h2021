@@ -87,7 +87,7 @@ løst noen oppgaver.
 * [number tree](https://open.kattis.com/problems/numbertree) - Her kan man bruke kombinasjoner av trær, køer og binærsøk!
 * [kitten](https://open.kattis.com/problems/kitten)
 * [boxes](https://open.kattis.com/problems/boxes) - Veldig bra!
-* [kattissquest] - Balansert?
+* [kattissquest](https://open.kattis.com/problems/kattissquest) - Balansert?
 
 ##### Kø, stack, prioritetskø, heap
 * [teque](https://open.kattis.com/problems/teque)
