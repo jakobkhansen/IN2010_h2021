@@ -36,9 +36,6 @@ def balanceFactor(node : Optional[Node]) -> int:
 def leftRotate(top) -> Node:
     middle = top.right;
 
-    if middle == None:
-        return top
-
     b = middle.left;
 
     middle.left = top;
@@ -185,9 +182,13 @@ def _display_aux(node):
     return lines, n + m + u, max(p, q) + 2, n + u // 2
 
 bst = BinarySearchTree()
-bst.insert(10)
-bst.insert(15)
-bst.insert(12)
-bst.insert(7)
+# bst.insert(10)
+# bst.insert(15)
+# bst.insert(12)
+# bst.insert(7)
+# bst.insert(8)
+
+for i in range(100):
+    bst.insert(i)
 
 bst.visualize()
