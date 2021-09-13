@@ -1,6 +1,11 @@
-from random import randint, random
+from random import randint
 
 
+# Dette er en implementasjon av en prioritetskø ved bruk av en heap. Denne
+# implementasjonen bruker rekursjon mer enn pseudokoden fra Lars, men oppnår akkurat det
+# samme resultatet.
+
+# Hjelpe-funksjoner
 def parent(index):
     return (index-1) // 2
 
@@ -11,16 +16,22 @@ def right_child(index):
     return index*2 + 2
 
 
+# Heap implementasjonen
 class PriorityQueue:
+    
     def __init__(self) -> None:
+        # Vi representerer heapen som et array fordi det er raskt og enkelt!
         self.array = []
 
+    # Setter inn element i heapen
+    # element kan være hva som helst, så lenge det er sammenlignbart med andre elementer i
+    # heapen
     def insert(self, element):
         index_inserted = len(self.array)
         self.array.append(element)
         self.bubbleUp(index_inserted)
 
-
+    # Tar ut minste element og returnerer det, fikser så heapen igjen.
     def pop(self):
 
         if len(self.array) == 1:
@@ -34,6 +45,7 @@ class PriorityQueue:
 
         return smallest
 
+    # Bobler opp på en gitt indeks, rekursiv
     def bubbleUp(self, index):
         if index == 0:
             return
@@ -43,6 +55,7 @@ class PriorityQueue:
             self.bubbleUp(parent(index))
 
 
+    # Bobler ned på en gitt indeks, rekursiv
     def bubbleDown(self, index):
         n = len(self.array)
 
@@ -62,6 +75,7 @@ class PriorityQueue:
     def swap(self, index1, index2):
         self.array[index1], self.array[index2] = self.array[index2], self.array[index1]
 
+# Stor test som tester at alle elementer kommer ut i sortert rekkefølge.
 def test():
     queue = PriorityQueue()
 
