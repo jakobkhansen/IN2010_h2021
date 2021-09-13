@@ -9,3 +9,5 @@
 **/*.vrb
 **/*.gz
 **/*.log
+
+pyrightconfig.json
