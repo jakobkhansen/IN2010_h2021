@@ -11,3 +11,4 @@
 **/*.log
 
 pyrightconfig.json
+__pycache__/
