@@ -65,12 +65,15 @@ class PriorityQueue:
 
             smallestChild = left_child(index) if left_value < right_value else right_child(index)
 
-            if self.array[smallestChild] <= self.array[index]:
+            if self.array[smallestChild] < self.array[index]:
                 self.swap(index, smallestChild)
                 self.bubbleDown(smallestChild)
 
-        elif left_child(index) < n and self.array[left_child(index)] <= self.array[index]:
+        elif left_child(index) < n and self.array[left_child(index)] < self.array[index]:
             self.swap(index, left_child(index))
+
+    def size(self):
+        return len(self.array)
 
     def swap(self, index1, index2):
         self.array[index1], self.array[index2] = self.array[index2], self.array[index1]
