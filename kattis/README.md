@@ -92,6 +92,8 @@ løst noen oppgaver.
 ##### Kø, stack, prioritetskø, heap
 * [teque](https://open.kattis.com/problems/teque)
 * [knigs of the forest](https://open.kattis.com/problems/knigsoftheforest)
+* [stock prices](https://open.kattis.com/problems/stockprices)
+* [continuous median](https://open.kattis.com/problems/continuousmedian)
 
 ##### Grafer, Graftraversering, DFS/BFS
 * [weak vertices](https://open.kattis.com/problems/weakvertices)
@@ -103,6 +105,7 @@ løst noen oppgaver.
 
 ##### Shortest path, Dijkstra's algoritme og liknende
 * [lost in translation](https://open.kattis.com/problems/lost)
+* [visualgo](https://open.kattis.com/problems/visualgo)
 
 ##### Spenntrær
 * [island hopping](https://open.kattis.com/problems/islandhopping)
