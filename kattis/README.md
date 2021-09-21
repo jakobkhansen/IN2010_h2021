@@ -98,6 +98,7 @@ løst noen oppgaver.
 ##### Grafer, Graftraversering, DFS/BFS
 * [weak vertices](https://open.kattis.com/problems/weakvertices)
 * [horror](https://open.kattis.com/problems/horror)
+* [torn to pieces](https://open.kattis.com/problems/torn2pieces)
 
 ##### Topologisk sortering
 * [pick up sticks](https://open.kattis.com/problems/pickupsticks)
