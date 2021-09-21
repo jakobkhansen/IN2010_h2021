@@ -13,10 +13,14 @@
 
 ##### DFS/BFS
 
+* [horror](https://open.kattis.com/problems/horror)
+* [torn to pieces](https://open.kattis.com/problems/torn2pieces)
+
 ##### Topologisk sortering
 
 * [build dependencies](https://open.kattis.com/problems/builddeps)
 * [pickup sticks](https://open.kattis.com/problems/pickupsticks)
+
 
 #### Studieløp topologisk sortering
 
