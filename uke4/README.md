@@ -11,6 +11,9 @@
 
 #### Relevante Kattis oppgaver
 
+##### Grafer
+* [weak vertices](https://open.kattis.com/problems/weakvertices)
+
 ##### DFS/BFS
 
 * [horror](https://open.kattis.com/problems/horror)
