@@ -44,6 +44,8 @@ class PriorityQueue:
 
         self.array[0] = self.array.pop()
 
+        self.array[0].heap_index = 0
+
         self.bubbleDown(0)
 
         return smallest
@@ -54,7 +56,10 @@ class PriorityQueue:
             return
 
         if self.array[index] < self.array[parent(index)]:
+
             self.array[index].heap_index = parent(index)
+            self.array[parent(index)].heap_index = index
+
             self.swap(index, parent(index))
             self.bubbleUp(parent(index))
 
@@ -70,12 +75,17 @@ class PriorityQueue:
             smallestChild = left_child(index) if left_value < right_value else right_child(index)
 
             if self.array[smallestChild] < self.array[index]:
+
                 self.array[index].heap_index = smallestChild
+                self.array[smallestChild].heap_index = index
+
                 self.swap(index, smallestChild)
                 self.bubbleDown(smallestChild)
 
         elif left_child(index) < n and self.array[left_child(index)] < self.array[index]:
             self.array[index].heap_index = left_child(index)
+            self.array[left_child(index)].heap_index = index
+
             self.swap(index, left_child(index))
 
     def size(self):
