@@ -25,8 +25,11 @@ def dijkstra(start_node, end_node):
     start_node.relax = 0
     pq.insert(start_node)
 
+    # Remove one node at a time
     while pq.size() > 0:
         current = pq.pop()
+
+        # Update if we found a shorter path to any nodes out from the source
         for weight,edge in current.neighbours:
             potentialRelax = current.relax + weight
 
