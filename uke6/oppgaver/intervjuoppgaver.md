@@ -169,7 +169,7 @@ Eksempler:
     Hvis vi lagrer hvert tall vi har sett tidligere i en dictionary/HashMap er det lett å finne tilbake til om vi har sett et tall eller ikke før. 
     Når vi da kommer til et tall kan vi sjekke i denne om det er dette tallet vi trenger for å summere til N sammen med tallet vi nå ser på.
     Altså når vi ser på tallet i kan vi se om vi har sett N-i tidligere, siden det er tallet vi trenger å summere i med for å få N.
-<details>
+</details>
 
 ### Spesiell oppgave
 
