@@ -15,8 +15,8 @@ Hvis dere har noe spesielt som dere har lyst til å gå gjennom en gang til, van
 
 ### Eksamensoppgaver
 
-TODO
+Jeg tenkte av vi kan se på oppgave 3 av prøveeksamen 2019. Det er en større grafteori oppgave, som inneholder en god del av det vi har sett på til nå. Hele prøveeksamen finnes [her](oppgaver/proveeksamen2019.pdf). Løsningsforslag finner du [her](losninger/proveeksamen.md)
 
 ### Intervjuspørsmål
 
-TODO
+En del oppgaver som jeg har blitt bedt om å løse på jobbintervjuer finner du [her](oppgaver/intervjuoppgaver.md). Løsningsforslag ligger sammen med oppgavene, men kodeimplementasjon av de fleste av oppgavene finner du [her](losninger/intervjuoppgaver.py)
