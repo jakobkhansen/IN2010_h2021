@@ -178,9 +178,12 @@ Eksempler:
 <details>
     <summary>Løsningsforslag</summary>
 
-    Hvis vi lagrer hvert tall vi har sett tidligere i en dictionary/HashMap er det lett å finne tilbake til om vi har sett et tall eller ikke før. 
-    Når vi da kommer til et tall kan vi sjekke i denne om det er dette tallet vi trenger for å summere til N sammen med tallet vi nå ser på.
-    Altså når vi ser på tallet i kan vi se om vi har sett N-i tidligere, siden det er tallet vi trenger å summere i med for å få N.
+    Hvis vi lagrer hvert tall vi har sett tidligere i en dictionary/HashMap er det lett å finne 
+    tilbake til om vi har sett et tall eller ikke før. 
+    Når vi da kommer til et tall kan vi sjekke i denne om det er dette tallet vi trenger for å 
+    summere til N sammen med tallet vi nå ser på.
+    Altså når vi ser på tallet `i` kan vi se om vi har sett `N-i` tidligere, siden det er tallet vi 
+    trenger å summere i med for å få N.
 </details>
 
 ### Spesiell oppgave
@@ -247,7 +250,7 @@ Det er dette vi til slutt har lyst til å få.
 ```
 
 Oppgaven er altså: Design en algoritme (ikke implementer) som vil finne punktet med så få spørringer som mulig.
-Du kan anta at du vet hvor stort kartet er (bredde, høyde) og hvor lite området må være (areal?) før du får eksakte koordinater av sattelitten
+Du kan anta at du vet hvor stort kartet er (bredde, høyde) og hvor lite området må være (areal) før du får eksakte koordinater av sattelitten
 
 <details>
     <summary>Løsningsforslag</summary>
