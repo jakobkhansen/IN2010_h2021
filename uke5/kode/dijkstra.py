@@ -43,7 +43,6 @@ def dijkstra(start_node, end_node):
                 else:
                     # If the node is in the queue, bubble the node upwards (updatekey)
                     pq.bubbleUp(edge.heap_index)
-        current.finished = True
 
     shortest_path_weight = end_node.relax
 
