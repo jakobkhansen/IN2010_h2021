@@ -62,7 +62,8 @@ Hva er kompleksiteten på løsningen din? La oss si at dokument-lengden er `n` o
 
     Dette er et ganske kjent problem innenfor informatikk. Det finnes mange gode algoritmer for å løse dette problemet, 
     som for eksempel Knut-Morris-Pratt, Boyer-Moore-Horspool, og flere, men disse er utenfor skopet av dette kurset.
-    Vi skal implementere en enkel `brute-force` metode som sjekker på enhver indeks i listen om det er starten på order vi leter etter.
+
+    Vi skal implementere en enkel `brute-force` metode som sjekker på enhver indeks i dokumentet om det er starten på ordet vi leter etter.
     Vi begynner å sammenlikne fra indeks 0 i søkeordet og hvis vi kommer helt til slutten uten å finne en bokstav 
     som ikke matcher med søkeordet, så har vi funnet ordet i teksten. 
     Merk at vi kan og burde stoppe å lete når vi er på slutten av dokumentet, 
@@ -81,6 +82,17 @@ Hva er kompleksiteten på løsningen din? La oss si at dokument-lengden er `n` o
 Du vil nå optimisere dette slik at du bare trenger å se gjennom dokumentet en gang, og så hente ut antallet for et tilfeldig ord uten å måte lete gjennom dokumentet en gang til. Ideen er da at man har lyst til å prosessere dokumentet bare 1 gang, men hente ut antallet til mange forskjellige ord etterpå. Hvordan skal du få til dette?
 
 Tips: Å sette inn og hente ut fra en dictionary/HashMap er i `O(1)` kjøretid.
+
+<details>
+    <summary>Løsningsforslag</summary>
+
+    Vi har altså lyst til å bygge opp en "cache" av ord forekomster, som vi kan bruke senere når vi trenger å vite hvor mange ganger et visst ord forekommer.
+    Dette er ikke vanskeligere enn å telle alle forekomster av et ord i en dictionary/HashMap. Når vi har gjort det så kan vi hente antall forekomster av
+    et ord i O(1) tid.
+
+    En litt kul og bedre datastruktur man kunne ha brukt for dette er en Trie, den lagrer en samling av ord veldig effektivt med tanke på minne,
+    da ord som har samme prefiks (starter med samme bokstaver) blir "slått sammen". Interessant, men ikke del av pensum :)
+</details>
 
 #### Bygge lang streng
 
@@ -104,7 +116,8 @@ Her er det også ofte flere gyldige løsninger for samme input. Kompleksitet er 
 
     En løsning blir da som følger: 
     Hold styr på hvor mange bokstaver du har igjen å bruke, samt hvor mange ganger en bokstav har blitt brukt på rad.
-    Filtrer ut de bokstavene du ikke har lov til å bruke (2 ganger på rad før) og velg den bokstaven du har flest av igjen av disse.
+    Filtrer ut de bokstavene du ikke har lov til å bruke (2 ganger på rad før eller 0 igjen) 
+    og velg den bokstaven du har flest av igjen av disse.
     Fortsett sånn til det ikke er noen bokstaver du har lov å bruke, da har du den lengste strengen som er mulig å bygge.
 </details>
 
@@ -122,6 +135,7 @@ N = 3 => [2,3,-5]
 N = 5 => [2, 3, -4, 6, -7]
 N = 1 => [0]
 N = 2 => [10, -10]
+
 ```
 
 Her er det veldig mange korrekte svar for de fleste inputs.
@@ -135,7 +149,27 @@ Her er det veldig mange korrekte svar for de fleste inputs.
 </details>
 
 
+##### Two-sum to N
 
+Gitt et array og et tall N, finn to elementer i listen som summerer til N og returner indeksen. Det er garantert at det finnes minst et par i arrayet som summerer til N. Du kan ikke bruke samme indeks to ganger, men samme tall hvis tallet forekommer to ganger i listen.
+Prøv å lag en algoritme som løser dette i lineær-tid.
+
+Eksempler:
+
+```
+[1,2,3], 5 => 1,2 (elementene på indeks 1 og 2 summerer til 5)
+[5, 10, 11, 3, 5, -2, 3], 1 => 3,5 (-2 + 3 = 1), 5,6 også gyldig
+[1, 1], 2 => 0,1
+[4, 11, 21, 15, 6], 21 => 3,4 (15 + 6 = 21)
+```
+
+<details>
+    <summary>Løsningsforslag</summary>
+
+    Hvis vi lagrer hvert tall vi har sett tidligere i en dictionary/HashMap er det lett å finne tilbake til om vi har sett et tall eller ikke før. 
+    Når vi da kommer til et tall kan vi sjekke i denne om det er dette tallet vi trenger for å summere til N sammen med tallet vi nå ser på.
+    Altså når vi ser på tallet i kan vi se om vi har sett N-i tidligere, siden det er tallet vi trenger å summere i med for å få N.
+<details>
 
 ### Spesiell oppgave
 

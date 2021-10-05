@@ -140,6 +140,28 @@ inputs = [
 
 for input in inputs:
     print(f"Testing input: {input} => {zero_sum_array(input)}")
+print()
 
+print('Two sum to N')
 
+def two_sum_to_n(array, n):
+    seen = {}
+    for i,num in enumerate(array):
+        if n - num in seen:
+            return seen[n-num], i
+        seen[num] = i
 
+    # Just in case there is no pair, shouldn't happen
+    return False
+
+inputs = [
+    [[1,2,3], 5],
+    [[5,10,11,3,5,-2,3], 1],
+    [[1,1], 2],
+    [[4,11,21,15,6], 21],
+]
+
+for input in inputs:
+    print(f"Testing input: {input} => {two_sum_to_n(*input)}")
+print()
+    
