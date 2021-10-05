@@ -1,6 +1,6 @@
 # Intervju oppgaver
 
-På en del utviklerfirmaer er det vanlig å ha kodetester og kodespørsmål som en del av et teknisk intervju. Da kan man få spørsmål om å lage et system, sette opp en arkitektur, og spesielt ofte får man problemløsningsoppgaver der algoritmer og datastrukturer er viktig. Her er en liste med intervjuspørsmål som jeg har blitt stilt. Merk at ikke alle disse er direkte knyttet opp mot pensum i IN2010, men at de fortsatt er relevante med tanke på å løse problemer med bruk av algoritmer og algoritmedesign.
+På en del utviklerfirmaer er det vanlig å ha kodetester og kodespørsmål som en del av et teknisk intervju. Da kan man få spørsmål om å lage et system, sette opp en arkitektur, og spesielt ofte får man problemløsningsoppgaver der algoritmer og datastrukturer er viktig. Her er en liste med intervjuspørsmål som jeg har vært borti. Merk at ikke alle disse er direkte knyttet opp mot pensum i IN2010, men at de er relevante med tanke på å løse problemer med bruk av algoritmer og algoritmedesign.
 
 Du kan finne veldig mange slike korte oppgaver som er rettet mot intervjuer her: https://leetcode.com/
 
