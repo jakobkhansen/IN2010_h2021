@@ -19,7 +19,7 @@ Eksempler:
 "test", "tset" => true
 "hello", "goodbye" => false
 "algorithm", "logarithm" => true
-"data", "dat" => true
+"data", "dat" => false
 "something", "" => false
 "", "" => true
 ```
