@@ -29,15 +29,22 @@ Hva er kompleksiteten på løsningen din?
 <details>
     <summary>Løsningsforslag</summary>
 
-    En ganske enkel måte å løse dette på er å "sortere" begge strenger alfabetisk og så sammenlikne de strengene. 
+    En ganske enkel måte å løse dette på er å "sortere" begge strenger alfabetisk og 
+    så sammenlikne de strengene. 
     Det vil være en O(n log n) løsning der n er lengden på strengene. 
-    Dette er en ganske god løsning og ville absolutt vært god nok, men vi kan gjøre dette litt bedre.
+    Dette er en ganske god løsning og ville absolutt vært god nok, 
+    men vi kan gjøre dette litt bedre.
     
-    Lag en dictionary/HashMap som skal telle bokstaver. Nøkkel er bokstav, verdi er antall ganger vi har sett den bokstaven. 
-    Loop over hver bokstav i den første strengen og tell opp bokstaver. Loop så over den andre strengen og tell ned bokstaver.
-    Hvis du sitter igjen med en dictionary/hashmap der verdiene til alle nøkler er 0, så er dette en permutasjon. 
-    Hvis du har positive verdier så betyr det at det finnes bokstaver i 
-    den første strengen som ikke finnes i den andre, og hvis du har negative verdier er det motsatt.
+    Lag en dictionary/HashMap som skal telle bokstaver. 
+    Nøkkel er bokstav, verdi er antall ganger vi har sett den bokstaven. 
+
+    Loop over hver bokstav i den første strengen og tell opp bokstaver. 
+    Loop så over den andre strengen og tell ned bokstaver.
+
+    Hvis du sitter igjen med en dictionary/hashmap der verdiene til alle nøkler er 0, så er 
+    dette en permutasjon. 
+    Hvis du har positive verdier så betyr det at det finnes bokstaver i  den første strengen som 
+    ikke finnes i den andre, og hvis du har negative verdier er det motsatt.
 
     Dette er en O(n) løsning der n er lengden på strengene.
 </details>
@@ -60,22 +67,27 @@ Hva er kompleksiteten på løsningen din? La oss si at dokument-lengden er `n` o
 <details>
     <summary>Løsningsforslag</summary>
 
-    Dette er et ganske kjent problem innenfor informatikk. Det finnes mange gode algoritmer for å løse dette problemet, 
-    som for eksempel Knut-Morris-Pratt, Boyer-Moore-Horspool, og flere, men disse er utenfor skopet av dette kurset.
+    Dette er et ganske kjent problem innenfor informatikk. 
+    Det finnes mange gode algoritmer for å løse dette problemet, 
+    som for eksempel Knut-Morris-Pratt, Boyer-Moore-Horspool, og flere, 
+    men disse er utenfor skopet av dette kurset.
 
-    Vi skal implementere en enkel `brute-force` metode som sjekker på enhver indeks i dokumentet om det er starten på ordet vi leter etter.
-    Vi begynner å sammenlikne fra indeks 0 i søkeordet og hvis vi kommer helt til slutten uten å finne en bokstav 
-    som ikke matcher med søkeordet, så har vi funnet ordet i teksten. 
+    Vi skal implementere en enkel `brute-force` metode som sjekker på enhver indeks i dokumentet 
+    om det er starten på ordet vi leter etter.
+    Vi begynner å sammenlikne fra indeks 0 i søkeordet og hvis vi kommer helt til slutten uten å 
+    finne en bokstav som ikke matcher med søkeordet, så har vi funnet ordet i teksten. 
     Merk at vi kan og burde stoppe å lete når vi er på slutten av dokumentet, 
     der ordet vi leter etter er for langt til å ha plass i de resterende bokstavene.
 
-    Denne algoritmen er en dobbel for-løkke der den ytterste løkka går over hele dokumentet (minus lengden på søkeordet) og 
-    den innerste løkka går fra punktet der den ytterste for-løkka er, og går lengden av ordet fremover. 
-    Se for deg at dette er et slags "vindu" på størrelsen av søkeordet, som vi forskyver en plass bortover i
-    hver iterasjon av den ytterste løkka.
+    Denne algoritmen er en dobbel for-løkke der den ytterste løkka går over hele dokumentet (minus 
+    lengden på søkeordet) og den innerste løkka går fra punktet der den ytterste for-løkka er, og 
+    går lengden av ordet fremover.  
+    Se for deg at dette er et slags "vindu" på størrelsen av søkeordet, som vi 
+    forskyver en plass bortover i hver iterasjon av den ytterste løkka.
 
     Kompleksiteten på dette blir O(n*m) der n er lengden på dokumentet og m er lengden på søkeordet.
 </details>
+
 
 ##### Del 2
 
