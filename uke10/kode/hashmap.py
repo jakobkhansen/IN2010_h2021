@@ -119,7 +119,7 @@ class HashMap:
                 return None
 
             location_hash = hash(self.array[location_index][0]) % len(self.array)
-            if location_hash <= index:
+            if location_hash <= index or location_hash > i:
                 replacer = self.array[location_index]
                 self.array[location_index] = self.find_replacement(location_index)
                 return replacer
@@ -155,6 +155,9 @@ def test():
     for key,val in insert_pairs:
         hashmap[key] = val
 
+    print('\nHASHMAP RESULT')
+    print(hashmap, '\n')
+
     # Assert len
     assert len(hashmap) == len(insert_pairs)
 
@@ -163,7 +166,7 @@ def test():
         assert hashmap[key] == val
 
     # Delete some of them
-    print(f'DELETING {DELETE_ITEMS} elements')
+    print(f'DELETING {DELETE_ITEMS} elements\n')
     for key,val in insert_pairs[:DELETE_ITEMS]:
         hashmap.delete(key)
 
@@ -171,13 +174,15 @@ def test():
     for key,val in insert_pairs[:DELETE_ITEMS]:
         assert hashmap[key] == None
 
+    
 
     # Assert insertions still working
     print(f'RETESTING insertions')
     for key, val in insert_pairs[DELETE_ITEMS:]:
         assert hashmap[key] == val
 
-    print(hashmap)
+    print('\nHASHMAP RESULT')
+    print(hashmap, '\n')
 
 
     print('\nTEST SUCCESSFUL')
