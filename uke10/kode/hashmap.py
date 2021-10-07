@@ -12,6 +12,7 @@ class HashMap:
         self.num_elems = 0
         self.load_factor = 0.75
 
+    # Get value from key
     def __getitem__(self, key):
         search = self.linear_probe_search(key)
 
@@ -21,9 +22,11 @@ class HashMap:
 
         return None
 
+    # Insert / replace key
     def __setitem__(self, key, value) -> None:
         self.linear_probing(key, value)
 
+    # Iterator, allows us to iterate over hashmap getting (key,value) every time
     def __iter__(self):
         self.i = 0
         return self
@@ -39,22 +42,32 @@ class HashMap:
         self.i += 1
         return ret_val
 
+    # Allows us to use len(hashmap), gives number of elements in map
+    def __len__(self):
+        return self.num_elems
+
+    # Resizes the table if necessary
     def dynamic_resize(self):
         if (self.num_elems / len(self.array)) >= self.load_factor:
             self.table_double()
 
+    # Doubles size of table and inserts elements in new table
     def table_double(self) -> None:
         old_vals = [(key,val) for key,val in self]
 
         self.array = [None]*(len(self.array)*2)
 
+        self.num_elems = 0
+
         for key,val in old_vals:
             self.linear_probing(key,val)
 
 
+    # Gets the index where a key wants to be placed
     def get_hash_index(self, key) -> int:
         return hash(key) % len(self.array)
 
+    # Linearly probes on an index until we find a spot where we can place key
     def linear_probing(self, key, value):
         index = self.get_hash_index(key)
 
@@ -66,8 +79,10 @@ class HashMap:
 
         self.array[index] = (key, value)
 
+        # Resize table if necessary
         self.dynamic_resize()
 
+    # Searches for a key and returns index, key and value if it is found. Else None
     def linear_probe_search(self, key):
         index = self.get_hash_index(key)
 
@@ -80,6 +95,12 @@ class HashMap:
             if location[0] == key:
                 return location_index, location[0], location[1]
 
+    # Deletes an element from the map using key
+    # Deletes with 'hole-filling' strategy which finds a replacement
+    # by searching ahead for a key which wants to be placed at or before the index
+    # we are deleting. If we find no such element before we hit a None, we don't
+    # need to fill the hole, because searching for any key after the hole does not
+    # require us to 'pass' the hole.
     def delete(self, key):
         search = self.linear_probe_search(key)
 
@@ -88,6 +109,8 @@ class HashMap:
             self.num_elems -= 1
             self.array[index] = self.find_replacement(index)
 
+    # Finds the replacement element, if we find a replacement, we need to fill the new
+    # hole, recursively.
     def find_replacement(self, index):
         for i in range(index+1, index+len(self.array)):
             location_index = i % len(self.array)
@@ -102,15 +125,21 @@ class HashMap:
                 return replacer
 
     def __repr__(self) -> str:
-        return str([x for x in self.array])
+        pairs = [f'{key}: {val}' for key,val in self]
+        return '{' + ', '.join(pairs) + '}'
+
+    def __str__(self) -> str:
+        return self.__repr__()
+
 
 # type: ignore
 def test():
-    INSERT_ITEMS = 10000
+    INSERT_ITEMS = 10
     DELETE_ITEMS = INSERT_ITEMS // 10
     low_alpha = string.ascii_lowercase
     randint = random.randint
 
+    print('GENERATING INPUTS')
     insert_strings = list(set([
         (''.join([random.choice(low_alpha) for _ in range(randint(1,10))]))
     for _ in range(INSERT_ITEMS)]))
@@ -126,6 +155,9 @@ def test():
     for key,val in insert_pairs:
         hashmap[key] = val
 
+    # Assert len
+    assert len(hashmap) == len(insert_pairs)
+
     # Assert insertions
     for key,val in insert_pairs:
         assert hashmap[key] == val
@@ -133,25 +165,22 @@ def test():
     # Delete some of them
     print(f'DELETING {DELETE_ITEMS} elements')
     for key,val in insert_pairs[:DELETE_ITEMS]:
-        # print(hashmap)
-        # print("DELETING", key,val, hashmap[key])
         hashmap.delete(key)
 
     # Assert deleted
     for key,val in insert_pairs[:DELETE_ITEMS]:
-        # print(key,val, hashmap[key])
         assert hashmap[key] == None
 
 
     # Assert insertions still working
     print(f'RETESTING insertions')
     for key, val in insert_pairs[DELETE_ITEMS:]:
-        # print(key, val, hashmap[key])
-        # print(hash(key) % len(hashmap.array))
         assert hashmap[key] == val
 
-    for key,val in hashmap:
-        print(key,val)
+    print(hashmap)
+
+
+    print('\nTEST SUCCESSFUL')
 
 if __name__ == "__main__":
     test()
