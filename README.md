@@ -19,3 +19,4 @@ Raskere svar og lettere å ha lenger samtaler på Mattermost!
 * [Uke 4](uke4) - Grafer og traversering (DFS, BFS), topologisk sortering
 * [Uke 5](uke5) - Grafer - Shortest path (Dijkstra, Bellman-Ford) og minimale spenntrær (Prim, Kruskal, Boruvka)
 * [Uke 6](uke6) - Rolig uke, ikke noe nytt pensum. Går gjennom tidligere pensum, eksamensoppgaver og andre oppgaver + oblig 2 greier
+* [Uke 7](uke7) - Bikonnektivitet, sterkt-sammenhengende komponenter
