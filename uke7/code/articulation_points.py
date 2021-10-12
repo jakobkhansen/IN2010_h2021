@@ -1,3 +1,9 @@
+# Algoritme som finner separasjonsnoder  i en graf
+# Blir kalt Hopcroft-Tarjan, men disse to har laget mange algoritmer, så det er vanskelig
+# å finne informasjon basert på dette navnet.
+
+# Kompleksitet: O(|V| + |E|)
+
 class Node:
     def __init__(self, label) -> None:
         self.label = label

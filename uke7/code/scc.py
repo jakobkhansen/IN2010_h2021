@@ -1,6 +1,10 @@
 # Velger å implementere dette med nabolister for å vise hvordan man kan reversere kanter
 # Tror egentlig nabomatrise vil være raskere i praksis her, selvom kompleksiteten er lik
 
+# Dette er Kosaraju's algorithm, ikke bland med Tarjans algorithm, som gjør det samme
+
+# Kompleksitet: O(|V| + |E|)
+
 class Node:
     def __init__(self, label) -> None:
         self.edges = []
