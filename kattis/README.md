@@ -90,7 +90,10 @@ løst noen oppgaver.
 * [kattissquest](https://open.kattis.com/problems/kattissquest) - Balansert?
 
 ##### Kø, stack, prioritetskø, heap
+
 * [teque](https://open.kattis.com/problems/teque)
+* [dvds](https://open.kattis.com/problems/dvds)
+* [game of throwns](https://open.kattis.com/problems/throwns)
 * [knigs of the forest](https://open.kattis.com/problems/knigsoftheforest)
 * [stock prices](https://open.kattis.com/problems/stockprices)
 * [continuous median](https://open.kattis.com/problems/continuousmedian)
@@ -107,6 +110,7 @@ løst noen oppgaver.
 ##### Shortest path, Dijkstra's algoritme og liknende
 * [lost in translation](https://open.kattis.com/problems/lost)
 * [visualgo](https://open.kattis.com/problems/visualgo)
+* [deceptive directions](https://open.kattis.com/problems/deceptivedirections)
 
 ##### Spenntrær
 * [island hopping](https://open.kattis.com/problems/islandhopping)
