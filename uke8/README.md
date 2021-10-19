@@ -11,7 +11,13 @@
 
 ##### Kattis
 
-* [height](https://open.kattis.com/problems/height) - Fin å starte med
+##### Sortering
+* Fine å starte med
+    * [height](https://open.kattis.com/problems/height)
+    * [mjehuric](https://open.kattis.com/problems/mjehuric)
+    * [sortofsorting](https://open.kattis.com/problems/sortofsorting)
+
 * [DVDs](https://open.kattis.com/problems/dvds)
 * [DA-sort](https://open.kattis.com/problems/dasort)
+* [classy](https://open.kattis.com/problems/classy)
 * [Ultra-Quicksort](https://open.kattis.com/problems/ultraquicksort) - Vanskelig!
