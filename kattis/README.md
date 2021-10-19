@@ -121,6 +121,7 @@ løst noen oppgaver.
 * [Equivalences](https://open.kattis.com/problems/equivalences)
 
 ##### Sortering
+* [height](https://open.kattis.com/problems/height) - Fin å starte med
 * [DVDs](https://open.kattis.com/problems/dvds)
 * [DA-sort](https://open.kattis.com/problems/dasort)
 * [Ultra-Quicksort](https://open.kattis.com/problems/ultraquicksort) - Vanskelig!
