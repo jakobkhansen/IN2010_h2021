@@ -107,22 +107,28 @@ class HashMap:
         if search != None:
             index, key, value = search
             self.num_elems -= 1
-            self.array[index] = self.find_replacement(index)
+            self.array[index] = None
+            self.find_replacement(index)
+            # self.array[index] = self.find_replacement(index)
 
     # Finds the replacement element, if we find a replacement, we need to fill the new
     # hole, recursively.
-    def find_replacement(self, index):
-        for i in range(index+1, index+len(self.array)):
-            location_index = i % len(self.array)
+    def find_replacement(self, start):
+        shift = 1
+        i = start
+        n = len(self.array)
+        while self.array[(i+shift) % n] != None:
+            shift_value = (i+shift) % n
+            j = hash(self.array[shift_value][0]) % len(self.array)
 
-            if self.array[location_index] == None:
-                return None
-
-            location_hash = hash(self.array[location_index][0]) % len(self.array)
-            if location_hash <= index or location_hash > i:
-                replacer = self.array[location_index]
-                self.array[location_index] = self.find_replacement(location_index)
-                return replacer
+            test = (i+shift) - i
+            if not ((i < j <= i+shift) or (0 <= j <= i+shift - n)):
+                self.array[i] = self.array[shift_value]
+                self.array[shift_value] = None
+                i = shift_value
+                shift = 1
+            else:
+                shift += 1
 
     def __repr__(self) -> str:
         pairs = [f'{key}: {val}' for key,val in self]
@@ -134,7 +140,7 @@ class HashMap:
 
 # type: ignore
 def test():
-    INSERT_ITEMS = 10
+    INSERT_ITEMS = 10000
     DELETE_ITEMS = INSERT_ITEMS // 10
     low_alpha = string.ascii_lowercase
     randint = random.randint
@@ -155,8 +161,8 @@ def test():
     for key,val in insert_pairs:
         hashmap[key] = val
 
-    print('\nHASHMAP RESULT')
-    print(hashmap, '\n')
+    # print('\nHASHMAP RESULT')
+    print(hashmap.array, '\n')
 
     # Assert len
     assert len(hashmap) == len(insert_pairs)
