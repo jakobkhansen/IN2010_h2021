@@ -28,19 +28,20 @@ class HashMap:
 
     # Iterator, allows us to iterate over hashmap getting (key,value) every time
     def __iter__(self):
-        self.i = 0
-        return self
+        for elem in self.array:
+            if elem != None:
+                yield elem
 
-    def __next__(self):
-        while self.i < len(self.array) and self.array[self.i] == None:
-            self.i += 1
+    # def __next__(self):
+        # while self.i < len(self.array) and self.array[self.i] == None:
+            # self.i += 1
 
-        if self.i >= len(self.array):
-            raise StopIteration
+        # if self.i >= len(self.array):
+            # raise StopIteration
 
-        ret_val = self.array[self.i]
-        self.i += 1
-        return ret_val
+        # ret_val = self.array[self.i]
+        # self.i += 1
+        # return ret_val
 
     # Allows us to use len(hashmap), gives number of elements in map
     def __len__(self):
@@ -162,7 +163,7 @@ def test():
         hashmap[key] = val
 
     # print('\nHASHMAP RESULT')
-    print(hashmap.array, '\n')
+    # print(hashmap.array, '\n')
 
     # Assert len
     assert len(hashmap) == len(insert_pairs)
@@ -188,7 +189,7 @@ def test():
         assert hashmap[key] == val
 
     print('\nHASHMAP RESULT')
-    print(hashmap, '\n')
+    # print(hashmap, '\n')
 
 
     print('\nTEST SUCCESSFUL')
