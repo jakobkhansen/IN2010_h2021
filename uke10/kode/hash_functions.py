@@ -7,7 +7,8 @@ def hash_better(word):
         sum += ord(c)*(31**i)
     return sum
 
-word = "ehllo"
+word = "hello"
 
-print(hash_sum(word))
-print(hash_better(word))
+# print(hash_sum(word))
+# print(hash_better(word))
+print(hash(word))

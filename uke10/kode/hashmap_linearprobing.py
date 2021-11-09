@@ -32,17 +32,6 @@ class HashMap:
             if elem != None:
                 yield elem
 
-    # def __next__(self):
-        # while self.i < len(self.array) and self.array[self.i] == None:
-            # self.i += 1
-
-        # if self.i >= len(self.array):
-            # raise StopIteration
-
-        # ret_val = self.array[self.i]
-        # self.i += 1
-        # return ret_val
-
     # Allows us to use len(hashmap), gives number of elements in map
     def __len__(self):
         return self.num_elems

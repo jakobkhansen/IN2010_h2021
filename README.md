@@ -20,3 +20,8 @@ Raskere svar og lettere å ha lenger samtaler på Mattermost!
 * [Uke 5](uke5) - Grafer - Shortest path (Dijkstra, Bellman-Ford) og minimale spenntrær (Prim, Kruskal, Boruvka)
 * [Uke 6](uke6) - Rolig uke, ikke noe nytt pensum. Går gjennom tidligere pensum, eksamensoppgaver og andre oppgaver + oblig 2 greier
 * [Uke 7](uke7) - Bikonnektivitet, sterkt-sammenhengende komponenter
+* [Uke 8](uke8) - Sortering 1 - Selection, Insertion, Bubble, Heap
+* [Uke 9](uke9) - Sortering 2 - Merge, Quick, Bucket, Radix
+* [Uke 10](uke10) - Hashing
+* [Uke 11](uke11) - Beregnbarhet og kompleksitet
+
