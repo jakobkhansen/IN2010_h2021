@@ -24,3 +24,14 @@ svar med minimal kjøretidskompleksitet?
 * Hvis B inneholder n² elementer, altså k = n², hvilken prosedyre gir riktig
 svar med minimal kjøretidskompleksitet?
 
+##### Fire typer grafer g oppgaven
+
+Her forsvant alternativene, de er på begge oppgavene:
+
+* DFS
+* BFS
+* Dijkstra
+* Prim
+* Bellman Ford
+* Topologisk sortering
+* En algoritme som bare returnerer 10
