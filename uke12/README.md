@@ -13,6 +13,8 @@ I denne gruppetimen så blir det noe rom for dere til å snakke om det pensumet 
 
 * Repetisjon av pensum?
 
+* Se på oblig 2?
+
 * Jobbe litt med oppgaver
     * Lager noen litt mer avanserte O-notasjon oppgaver til dere
 

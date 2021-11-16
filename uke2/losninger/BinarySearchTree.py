@@ -8,13 +8,14 @@ class Node:
         self.left : Optional[Node] = None
         self.right : Optional[Node] = None
         self.height : int = 0
+        self.num_higher = 0
 
     # Prints a node in a more clean fashion when doing print(node)
     def __repr__(self) -> str:
         left_val = str(self.left.value) if self.left != None else "None"
         right_val = str(self.right.value) if self.right != None else "None"
 
-        return f"Node({self.value}, {left_val}, {right_val})"
+        return f"Node({self.value}, {left_val}, {right_val}, {self.num_higher})"
 
     # Updates the height of a given node
     # Assumes that self.left and self.right have updated heights
@@ -41,6 +42,7 @@ def balanceFactor(node : Optional[Node]) -> int:
 
 # Rotates left with top as the top node, middle as the right child of top
 def leftRotate(top) -> Node:
+    print("top original")
     middle = top.right;
 
     b = middle.left;
@@ -48,13 +50,21 @@ def leftRotate(top) -> Node:
     middle.left = top;
     top.right = b;
 
+
     top.update_height()
     middle.update_height()
+
+    top.num_higher = 0 if top.right == None else top.right.num_higher + 1
+
+
+    middle.num_higher = 0 if middle.right == None else middle.right.num_higher + 1
+
 
     return middle
 
 # Rotates right with top as the top node, middle as the left child of top
 def rightRotate(top) -> Node:
+    print("top original", top)
     middle = top.left;
 
     b = middle.right
@@ -62,8 +72,28 @@ def rightRotate(top) -> Node:
     middle.right = top;
     top.left = b;
 
+
     top.update_height()
     middle.update_height()
+
+    print(top)
+    # print(middle)
+
+    top.num_higher = 0 if top.right == None else top.right.num_higher + 1
+    print(top)
+    print(top.right)
+
+    middle.num_higher = 0 if middle.right == None else middle.right.num_higher + 1
+    if middle.right.left != None:
+        middle.right.left.num_higher = 0 if middle.right.left.right == None else middle.right.left.right.num_higher + 1
+        print("here", middle.right.left)
+        # print("yes", middle.right.left.num_higher + 1)
+        middle.num_higher += middle.right.left.num_higher + 1
+
+    # print()
+    print(top)
+    # print(middle)
+    # print()
 
     return middle
 
@@ -88,6 +118,7 @@ class BinarySearchTree:
 
     def __init__(self):
         self.root = None
+        self.uqs = 0
 
     # Visualizes the tree
     def visualize(self):
@@ -112,9 +143,11 @@ class BinarySearchTree:
         # Left
         elif value < current.value:
             current.left = self.insert_recursive(value, current.left)
+            self.uqs += current.num_higher + 1
 
         # Right
         elif value >= current.value:
+            current.num_higher += 1
             current.right = self.insert_recursive(value, current.right)
 
         # Oppdater høyde på vei opp i rekursjonen
@@ -143,6 +176,12 @@ class BinarySearchTree:
 
         elif current.value < value:
             return self.search_recursive(value, current.right)
+
+    def preorder(self, current):
+        if current != None:
+            print(current)
+            self.preorder(current.left)
+            self.preorder(current.right)
 
 # Disse to metodene hjelper bare med å visualisere et binært søketre i terminalen. Bruk
 # bst.visualize() for å visualisere bst i terminalen.
@@ -199,7 +238,13 @@ def _display_aux(node):
 
 bst = BinarySearchTree()
 
-for i in range(100):
+# for i in range(int(input())):
+    # bst.insert(int(input()))
+# print(bst.uqs)
+
+for i in range(13, 0, -1):
     bst.insert(i)
+# bst.preorder(bst.root)
+print(bst.uqs)
 
 bst.visualize()
