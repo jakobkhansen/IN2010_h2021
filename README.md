@@ -24,4 +24,5 @@ Raskere svar og lettere å ha lenger samtaler på Mattermost!
 * [Uke 9](uke9) - Sortering 2 - Merge, Quick, Bucket, Radix
 * [Uke 10](uke10) - Hashing
 * [Uke 11](uke11) - Beregnbarhet og kompleksitet
+* [Uke 12](uke12) - Eksamensøving, pensumrepetisjon og andre oppgaver
 
