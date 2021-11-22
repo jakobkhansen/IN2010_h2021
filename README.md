@@ -25,4 +25,4 @@ Raskere svar og lettere å ha lenger samtaler på Mattermost!
 * [Uke 10](uke10) - Hashing
 * [Uke 11](uke11) - Beregnbarhet og kompleksitet
 * [Uke 12](uke12) - Eksamensøving, pensumrepetisjon og andre oppgaver
-
+* [Uke 13](uke13) - Repetisjonstime - Tema: Hashing

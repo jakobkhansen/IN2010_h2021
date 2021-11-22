@@ -102,6 +102,7 @@ løst noen oppgaver.
 * [weak vertices](https://open.kattis.com/problems/weakvertices)
 * [horror](https://open.kattis.com/problems/horror)
 * [torn to pieces](https://open.kattis.com/problems/torn2pieces)
+* [money matters](https://open.kattis.com/problems/moneymatters)
 
 ##### Topologisk sortering
 * [pick up sticks](https://open.kattis.com/problems/pickupsticks)
