@@ -9,6 +9,7 @@
 **/*.vrb
 **/*.gz
 **/*.log
+.hypothesis
 
 pyrightconfig.json
 __pycache__/

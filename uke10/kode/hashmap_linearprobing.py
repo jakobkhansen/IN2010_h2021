@@ -1,6 +1,8 @@
 # type: ignore
 import string
 import random
+import hypothesis as hp
+from hypothesis import strategies as st
 
 # Hashmap implemented using open addressing
 # Collisions are handled with linear probing
@@ -128,60 +130,27 @@ class HashMap:
         return self.__repr__()
 
 
-# type: ignore
-def test():
-    INSERT_ITEMS = 10000
-    DELETE_ITEMS = INSERT_ITEMS // 10
-    low_alpha = string.ascii_lowercase
-    randint = random.randint
-
-    print('GENERATING INPUTS')
-    insert_strings = list(set([
-        (''.join([random.choice(low_alpha) for _ in range(randint(1,10))]))
-    for _ in range(INSERT_ITEMS)]))
-
-
-    insert_pairs = [(x, random.randint(0,1000)) for x in insert_strings]
-
-
+@hp.given(st.dictionaries(st.integers(), st.text()))
+@hp.settings(max_examples=1000)
+def hyp_test(pairs):
     hashmap = HashMap()
 
-    # Insert elements
-    print(f"INSERTING {INSERT_ITEMS} elements")
-    for key,val in insert_pairs:
+    keys = list(pairs.keys())
+    values = list(pairs.values())
+
+    for key,val in pairs.items():
         hashmap[key] = val
 
-    # print('\nHASHMAP RESULT')
-    # print(hashmap.array, '\n')
+    assert len(hashmap) == len(pairs)
 
-    # Assert len
-    assert len(hashmap) == len(insert_pairs)
-
-    # Assert insertions
-    for key,val in insert_pairs:
+    for key,val in pairs.items():
         assert hashmap[key] == val
 
-    # Delete some of them
-    print(f'DELETING {DELETE_ITEMS} elements\n')
-    for key,val in insert_pairs[:DELETE_ITEMS]:
-        hashmap.delete(key)
 
-    # Assert deleted
-    for key,val in insert_pairs[:DELETE_ITEMS]:
-        assert hashmap[key] == None
+    if len(hashmap) > 0:
+        hashmap.delete(keys[0])
 
-    
-
-    # Assert insertions still working
-    print(f'RETESTING insertions')
-    for key, val in insert_pairs[DELETE_ITEMS:]:
-        assert hashmap[key] == val
-
-    print('\nHASHMAP RESULT')
-    # print(hashmap, '\n')
-
-
-    print('\nTEST SUCCESSFUL')
+        assert hashmap[keys[0]] == None
 
 if __name__ == "__main__":
-    test()
+    hyp_test()
