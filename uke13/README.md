@@ -26,7 +26,7 @@ Tegn opp hvordan tabellen ser ut etter innsetting
 
 ```
 Tabell størrelse: 8
-Hash(x) = x*3 % 8
+Hash(x) = x*2 % 8
 Kollisjonshåndtering: Separate chaining
 
 Sett inn: 7, 15, 0, 12, 8, 9
