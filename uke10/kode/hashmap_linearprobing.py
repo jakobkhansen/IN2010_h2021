@@ -1,8 +1,6 @@
 # type: ignore
-import string
-import random
-import hypothesis as hp
-from hypothesis import strategies as st
+import string import random import hypothesis as hp from hypothesis import strategies as
+st
 
 # Hashmap implemented using open addressing
 # Collisions are handled with linear probing
@@ -113,7 +111,6 @@ class HashMap:
             shift_value = (i+shift) % n
             j = hash(self.array[shift_value][0]) % len(self.array)
 
-            test = (i+shift) - i
             if not ((i < j <= i+shift) or (0 <= j <= i+shift - n)):
                 self.array[i] = self.array[shift_value]
                 self.array[shift_value] = None
